@@ -12,6 +12,17 @@ partialsDir: path.join(app.get('views'), 'partials'),
 extname: '.hbs'
 }));
 
+
+// Midleware:
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
+// Routes 
+app.use(require('./routes/router'));
+
+//Static Files 
+app.use(express.static(path.join(__dirname, 'public')));
+
 const port = 4200
   app.listen(port, () => {
     console.log(`Server run in port ${port}`)
