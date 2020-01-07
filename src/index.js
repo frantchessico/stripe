@@ -11,7 +11,7 @@ layoutsDir: path.join(app.get('views'), 'layout'),
 partialsDir: path.join(app.get('views'), 'partials'),
 extname: '.hbs'
 }));
-
+app.set('view engine', '.hbs')
 
 // Midleware:
 app.use(express.urlencoded({extended: false}));
