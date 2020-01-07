@@ -23,7 +23,8 @@ app.use(require('./routes/router'));
 //Static Files 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const port =  process.env.PORT || 4200
+// const port =  process.env.PORT || 4200
+const port = 4200
   app.listen(port, () => {
     console.log(`Server run in port ${port}`)
 });
